@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavLinkComponent } from '../../ui/nav-link/nav-link.component';
 import { NgFor } from '@angular/common';
-import { LinkInfo } from '@models/header.modal';
+import { linkinfo } from '@models/header.model';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +11,9 @@ import { LinkInfo } from '@models/header.modal';
   imports: [NavLinkComponent, NgFor],
 })
 export class HeaderComponent {
-  linkInfo: LinkInfo[] = [
+  isToggled: boolean = false;
+
+  linkinfo: linkinfo[] = [
     {
       title: 'Applications',
       url: '/',
@@ -28,4 +30,9 @@ export class HeaderComponent {
       iconName: 'smart_display',
     },
   ];
+
+  toggleHamburgerMenu() {
+    console.log('Clicked');
+    this.isToggled = !this.isToggled;
+  }
 }

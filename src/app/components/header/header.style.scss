@@ -1,3 +1,49 @@
 .header_wrapper {
   @apply bg-primary_brand h-[86px] px-6;
 }
+
+.hum_menu_wrapper {
+  @apply flex items-center absolute left-7 top-10;
+}
+
+.hum_menu {
+  @apply lg:hidden w-7 h-1 bg-white rounded-full transition-all duration-150 before:content-[''] before:absolute before:w-7 before:h-1 before:bg-white before:rounded-full before:-translate-y-2 before:transition-all before:duration-150 after:content-[''] after:absolute after:w-7 after:h-1 after:bg-white after:rounded-full after:translate-y-2 after:transition-all after:duration-75;
+}
+
+.humberger_toggle {
+  @apply [&>div]:h-0 [&>div]:w-0 [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45;
+}
+
+.header_link_wrapper {
+  @apply -left-full max-lg:fixed top-[87px] max-lg:h-[calc(100vh-87px)] bg-primary_brand w-[85%] duration-300 ease-in;
+}
+
+.drawer_toggle {
+  @apply left-0;
+}
+
+.header_link_info_wrapper {
+  @apply flex items-center gap-2 flex-wrap max-lg:flex-col max-lg:items-start max-lg:px-3 py-10;
+}
+
+.header_link_info_wrapper.sidebar {
+  @apply max-lg:justify-around max-lg:flex-row max-lg:py-2 max-lg:absolute bottom-0 right-0 left-0 border-t border-white
+  
+  lg:fixed lg:left-0 lg:max-w-[215px] bg-primary_brand lg:flex-col lg:items-start lg:mx-6 lg:top-[112px] lg:max-h-[418px] lg:h-full lg:rounded-[4px] py-0;
+}
+
+:host .sidebar ::ng-deep .nav_link_container {
+  @apply max-lg:flex-col max-lg:gap-0 lg:px-5 lg:border-t lg:rounded-none lg:w-full lg:py-2 border-lightest_brand;
+}
+
+:host .sidebar > li:last-child ::ng-deep .nav_link_container {
+  @apply lg:border-b;
+}
+
+:host .sidebar ::ng-deep .material-icons {
+  @apply lg:hidden;
+}
+
+:host .sidebar li {
+  @apply lg:w-full;
+}

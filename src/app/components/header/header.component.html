@@ -1,14 +1,33 @@
 <header class="header_wrapper">
   <nav class="flex align-middle h-full">
-    <div class="min-w-[215px] my-auto">
+    <div class="min-w-[215px] my-auto max-lg:ml-16">
       <img src="/logo-light.png" alt="Cnect Logo" width="120px" />
     </div>
 
-    <ul class="flex items-center gap-2">
-      <li *ngFor="let linkData of linkInfo">
-        <app-nav-link [linkInfo]="linkData"></app-nav-link>
-      </li>
-    </ul>
+    <main
+      (click)="toggleHamburgerMenu()"
+      class="cursor-pointer hum_menu_wrapper"
+    >
+      <div
+        id="toggleMenu"
+        class="grid place-content-center humberger_toggle"
+        [class.humberger_toggle]="isToggled"
+      >
+        <div class="hum_menu"></div>
+      </div>
+    </main>
+    <div class="header_link_wrapper" [class.drawer_toggle]="isToggled">
+      <ul class="header_link_info_wrapper">
+        <li *ngFor="let linkData of linkinfo">
+          <app-nav-link [linkinfo]="linkData"></app-nav-link>
+        </li>
+      </ul>
+      <ul class="header_link_info_wrapper sidebar">
+        <li *ngFor="let linkData of linkinfo">
+          <app-nav-link [linkinfo]="linkData"></app-nav-link>
+        </li>
+      </ul>
+    </div>
 
     <!-- <ul>
         <li>

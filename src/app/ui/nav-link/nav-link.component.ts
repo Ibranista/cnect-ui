@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LinkInfo } from '@models/header.modal';
+import { linkinfo } from '@models/header.model';
 
 @Component({
   selector: 'app-nav-link',
@@ -9,7 +9,7 @@ import { LinkInfo } from '@models/header.modal';
   styleUrl: './nav-link.component.scss',
 })
 export class NavLinkComponent {
-  @Input() linkInfo: LinkInfo = {
+  @Input() linkinfo: linkinfo = {
     title: '',
     url: '/',
     iconName: 'contact_page',

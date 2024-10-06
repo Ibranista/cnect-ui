@@ -10,6 +10,7 @@ module.exports = {
         secondary_brand: "#148AD6",
         bg_gray: "#F7F7F7",
         light_gray: "#BFBFBF",
+        lightest_brand: "#345B7E",
         inactive: "#A4A4A4",
       },
     },
