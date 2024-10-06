@@ -5,33 +5,8 @@
     </div>
 
     <ul class="flex items-center gap-2">
-      <li>
-        <div
-          class="flex gap-2 items-center hover:text-white cursor-pointer text-inactive rounded-md px-3"
-        >
-          <span class="material-icons md-18">contact_page</span>
-          <p>Applications</p>
-        </div>
-      </li>
-      <li>
-        <div
-          class="flex gap-2 items-center hover:text-white cursor-pointer text-inactive rounded-md px-3"
-        >
-          <span class="material-icons md-18 material-symbols-outlined"
-            >account_circle</span
-          >
-          <p>Profiles</p>
-        </div>
-      </li>
-      <li>
-        <div
-          class="flex gap-2 items-center hover:text-white cursor-pointer text-inactive rounded-md px-3"
-        >
-          <span class="material-icons md-18 material-symbols-outlined"
-            >smart_display</span
-          >
-          <p>Videos</p>
-        </div>
+      <li *ngFor="let linkData of linkInfo">
+        <app-nav-link [linkInfo]="linkData"></app-nav-link>
       </li>
     </ul>
 
