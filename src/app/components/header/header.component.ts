@@ -13,7 +13,7 @@ import { linkinfo } from '@models/header.model';
 export class HeaderComponent {
   isToggled: boolean = false;
 
-  linkinfo: linkinfo[] = [
+  primaryLinkInfo: linkinfo[] = [
     {
       title: 'Applications',
       url: '/',
@@ -28,6 +28,27 @@ export class HeaderComponent {
       title: 'Videos',
       url: '/',
       iconName: 'smart_display',
+    },
+  ];
+
+  secondaryLinkInfo: linkinfo[] = [
+    {
+      title: 'Applications',
+      url: '/',
+      iconName: 'contact_page',
+      secondaryIconName: 'chevron_right',
+    },
+    {
+      title: 'Profiles',
+      url: '/',
+      iconName: 'account_circle',
+      secondaryIconName: 'chevron_right',
+    },
+    {
+      title: 'Videos',
+      url: '/',
+      iconName: 'smart_display',
+      secondaryIconName: 'chevron_right',
     },
   ];
 

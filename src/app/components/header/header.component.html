@@ -18,15 +18,20 @@
     </main>
     <div class="header_link_wrapper" [class.drawer_toggle]="isToggled">
       <ul class="header_link_info_wrapper">
-        <li *ngFor="let linkData of linkinfo">
-          <app-nav-link [linkinfo]="linkData"></app-nav-link>
+        <li *ngFor="let primaryLinkData of primaryLinkInfo">
+          <app-nav-link [linkinfo]="primaryLinkData"></app-nav-link>
         </li>
       </ul>
       <ul class="header_link_info_wrapper sidebar">
-        <li *ngFor="let linkData of linkinfo">
-          <app-nav-link [linkinfo]="linkData"></app-nav-link>
+        <li *ngFor="let secondaryLinkData of secondaryLinkInfo">
+          <app-nav-link [linkinfo]="secondaryLinkData"></app-nav-link>
         </li>
       </ul>
+      <span
+        (click)="toggleHamburgerMenu()"
+        class="material-icons text-lg max-lg:text-2xl close_chevron_icon text-white"
+        >arrow_back</span
+      >
     </div>
 
     <!-- <ul>

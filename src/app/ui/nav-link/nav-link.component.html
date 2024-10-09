@@ -1,6 +1,11 @@
-<div class="nav_link_container">
-  <span class="material-icons text-lg max-lg:text-2xl">{{
+<section class="nav_link_container">
+  <span class="material-icons primary text-lg max-lg:text-2xl">{{
     linkinfo.iconName
   }}</span>
   <p class="text-lg">{{ linkinfo.title }}</p>
-</div>
+  @if(linkinfo.secondaryIconName){
+  <span class="material-icons text-lg max-lg:text-2xl secondaryIcon">{{
+    linkinfo.secondaryIconName
+  }}</span>
+  }
+</section>
