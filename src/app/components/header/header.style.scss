@@ -57,5 +57,5 @@
 }
 
 .close_chevron_icon {
-  @apply absolute top-1/3 -right-3 text-6xl;
+  @apply absolute top-1/3 -right-3 text-6xl lg:hidden;
 }
